@@ -37,8 +37,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
-        <a href="#" className="text-xl font-bold gradient-text">
-          KS
+        <a href="#" className="flex items-center">
+          <img
+            src="/ks-logo.svg"
+            alt="KS logo"
+            className="h-10 w-10 rounded-xl object-cover shadow-sm"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
