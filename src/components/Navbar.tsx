@@ -41,7 +41,7 @@ const Navbar = () => {
           <img
             src="/ks-logo.svg"
             alt="KS logo"
-            className="h-10 w-10 rounded-xl object-cover shadow-sm"
+            className="h-10 w-10 object-contain"
           />
         </a>
 
