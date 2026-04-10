@@ -8,16 +8,16 @@ const CaseStudy = () => {
 
   return (
     <section ref={ref} className="section-padding">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-sm font-medium text-primary uppercase tracking-wider">Case Study</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">
-            Business Website <span className="gradient-text">Platform</span>
+          <span className="section-kicker">Case Study</span>
+          <h2 className="section-heading mt-3">
+            Business website <span className="gradient-text">thinking</span>
           </h2>
         </motion.div>
 
@@ -48,14 +48,14 @@ const CaseStudy = () => {
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
               className="glass-card p-6 hover-lift"
             >
-              <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center mb-3">
-                <item.icon size={18} className="text-primary-foreground" />
+              <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                <item.icon size={18} className="text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+              <h3 className="font-semibold tracking-tight mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-6">{item.text}</p>
             </motion.div>
           ))}
         </motion.div>

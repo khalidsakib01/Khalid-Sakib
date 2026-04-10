@@ -38,7 +38,7 @@ const Projects = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" ref={ref} className="section-padding bg-secondary/30">
+    <section id="projects" ref={ref} className="section-padding bg-secondary/40">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -46,9 +46,9 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-sm font-medium text-primary uppercase tracking-wider">Portfolio</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">
-            Featured <span className="gradient-text">Projects</span>
+          <span className="section-kicker">Portfolio</span>
+          <h2 className="section-heading mt-3">
+            Selected <span className="gradient-text">explorations</span>
           </h2>
         </motion.div>
 
@@ -58,40 +58,39 @@ const Projects = () => {
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
               className="glass-card overflow-hidden group hover-lift"
             >
-              <div className="h-48 gradient-bg opacity-80 flex items-center justify-center">
-                <span className="text-3xl font-bold text-primary-foreground opacity-50 group-hover:opacity-80 transition-opacity">
+              <div className="h-48 bg-gradient-to-br from-primary/20 via-transparent to-accent/15 flex items-end p-6">
+                <span className="text-2xl md:text-3xl font-bold tracking-tight text-foreground/90">
                   {project.title}
                 </span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <p className="text-sm leading-6 text-muted-foreground mb-5">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-5">
                   {project.tech.map((t) => (
-                    <span key={t} className="px-2.5 py-1 text-xs rounded-full bg-primary/10 text-primary font-medium">
+                    <span key={t} className="soft-pill border border-border bg-secondary/65 px-3 py-1.5 text-xs font-semibold text-foreground">
                       {t}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
+                <div className="flex gap-5">
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                   >
-                    <ExternalLink size={14} /> Live Demo
+                    <ExternalLink size={15} /> View Demo
                   </a>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <Github size={14} /> Code
+                    <Github size={15} /> Repository
                   </a>
                 </div>
               </div>
@@ -104,4 +103,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
