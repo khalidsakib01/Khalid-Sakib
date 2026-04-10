@@ -4,31 +4,31 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Velleza",
-    description: "Modern business website with clean UI, responsive layout, and optimized performance.",
+    title: "E-Commerce Demo",
+    description: "Sample storefront experience with product browsing, category filtering, and a polished responsive UI.",
     tech: ["React", "Tailwind CSS", "Vercel"],
-    live: "#",
+    live: "https://example.com/demo-store",
     github: "https://github.com/khalidsakib01",
   },
   {
-    title: "Trek Platform",
-    description: "Interactive trek platform with dynamic content and modern design architecture.",
+    title: "Dashboard Demo",
+    description: "Analytics dashboard concept with cards, charts, activity tracking, and a clean admin layout.",
     tech: ["React", "Firebase", "Tailwind CSS"],
-    live: "#",
+    live: "https://example.com/demo-dashboard",
     github: "https://github.com/khalidsakib01",
   },
   {
-    title: "Star Trek Three",
-    description: "Feature-rich web application showcasing advanced frontend development skills.",
+    title: "Portfolio Concept",
+    description: "Creative portfolio demo focused on smooth transitions, strong visual hierarchy, and modern presentation.",
     tech: ["React", "JavaScript", "CSS3"],
-    live: "#",
+    live: "https://example.com/demo-portfolio",
     github: "https://github.com/khalidsakib01",
   },
   {
-    title: "Artemis Web Studio",
-    description: "Professional web studio website with stunning visuals and smooth interactions.",
+    title: "Agency Landing Page",
+    description: "Marketing-focused landing page demo with service sections, testimonials, and conversion-first structure.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
-    live: "#",
+    live: "https://example.com/demo-agency",
     github: "https://github.com/khalidsakib01",
   },
 ];
@@ -104,4 +104,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
