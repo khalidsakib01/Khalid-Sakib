@@ -7,28 +7,28 @@ const projects = [
     title: "Velleza",
     description: "Modern business website with clean UI, responsive layout, and optimized performance.",
     tech: ["React", "Tailwind CSS", "Vercel"],
-    live: "https://velleza.vercel.app",
+    live: "#",
     github: "https://github.com/khalidsakib01",
   },
   {
     title: "Trek Platform",
     description: "Interactive trek platform with dynamic content and modern design architecture.",
     tech: ["React", "Firebase", "Tailwind CSS"],
-    live: "https://trek.bolt.host",
+    live: "#",
     github: "https://github.com/khalidsakib01",
   },
   {
     title: "Star Trek Three",
     description: "Feature-rich web application showcasing advanced frontend development skills.",
     tech: ["React", "JavaScript", "CSS3"],
-    live: "https://star-trek-three.vercel.app",
+    live: "#",
     github: "https://github.com/khalidsakib01",
   },
   {
     title: "Artemis Web Studio",
     description: "Professional web studio website with stunning visuals and smooth interactions.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
-    live: "https://artemiswebstudio.vercel.app",
+    live: "#",
     github: "https://github.com/khalidsakib01",
   },
 ];
@@ -104,3 +104,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
