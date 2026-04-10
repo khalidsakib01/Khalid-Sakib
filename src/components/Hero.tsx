@@ -1,4 +1,11 @@
 import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
+
+const badges = [
+  "4+ Years Experience",
+  "Full-Stack Web Development",
+  "Performance Optimization",
+];
 
 const Hero = () => {
   return (
@@ -24,11 +31,28 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
           >
             Web developer with 4+ years of experience creating high-performance
             digital products that help businesses grow online.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-3"
+          >
+            {badges.map((badge) => (
+              <span
+                key={badge}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-2 text-sm font-medium text-foreground shadow-sm"
+              >
+                <CheckCircle2 size={14} className="text-primary" />
+                {badge}
+              </span>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
