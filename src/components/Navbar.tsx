@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -13,7 +13,10 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dark] = useState(true);
+  const [dark, setDark] = useState(() => {
+    const stored = localStorage.getItem("theme");
+    return stored ? stored === "dark" : true;
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -23,6 +26,7 @@ const Navbar = () => {
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
+    localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
   useEffect(() => {
@@ -62,6 +66,13 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <button
+            onClick={() => setDark(!dark)}
+            className="p-2 rounded-full hover:bg-secondary transition-colors"
+            aria-label="Toggle theme"
+          >
+            {dark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <a
             href="#contact"
             className="gradient-bg text-primary-foreground px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
@@ -71,6 +82,13 @@ const Navbar = () => {
         </div>
 
         <div className="flex md:hidden items-center gap-2">
+          <button
+            onClick={() => setDark(!dark)}
+            className="p-2 rounded-full border border-border bg-card/70 backdrop-blur-md"
+            aria-label="Toggle theme"
+          >
+            {dark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="p-2 rounded-full border border-border bg-card/70 backdrop-blur-md"
