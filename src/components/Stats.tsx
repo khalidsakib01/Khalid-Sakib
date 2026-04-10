@@ -1,4 +1,5 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Clock, Users, Cpu } from "lucide-react";
 
@@ -14,7 +15,7 @@ const Stats = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="section-padding pt-8 md:pt-12">
+    <section ref={ref} className="section-padding">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, i) => (
@@ -22,13 +23,13 @@ const Stats = () => {
               key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass-card p-6 md:p-7 hover-lift"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="glass-card p-6 md:p-8 text-center hover-lift"
             >
-              <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
-                <stat.icon size={20} className="text-primary" />
+              <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mx-auto mb-4">
+                <stat.icon size={22} className="text-primary-foreground" />
               </div>
-              <div className="text-3xl md:text-4xl font-extrabold tracking-tight mb-1 text-foreground">
+              <div className="text-3xl md:text-4xl font-bold gradient-text mb-1">
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>

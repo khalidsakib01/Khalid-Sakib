@@ -33,8 +33,8 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="section-kicker">Skills</span>
-          <h2 className="section-heading mt-3">
+          <span className="text-sm font-medium text-primary uppercase tracking-wider">Skills</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">
             Technologies I <span className="gradient-text">work with</span>
           </h2>
         </motion.div>
@@ -45,18 +45,18 @@ const Skills = () => {
               key={group.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
               className="glass-card p-6 hover-lift"
             >
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
-                <group.icon size={22} className="text-primary" />
+              <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4">
+                <group.icon size={22} className="text-primary-foreground" />
               </div>
-              <h3 className="text-lg font-semibold mb-4 tracking-tight">{group.title}</h3>
-              <div className="flex flex-wrap gap-2.5">
+              <h3 className="text-lg font-semibold mb-4">{group.title}</h3>
+              <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="soft-pill border border-border bg-secondary/65 px-3 py-1.5 text-sm font-medium text-foreground"
+                    className="px-3 py-1.5 text-sm rounded-full bg-secondary text-foreground font-medium"
                   >
                     {skill}
                   </span>
