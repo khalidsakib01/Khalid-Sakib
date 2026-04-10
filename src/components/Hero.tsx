@@ -17,6 +17,16 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-2 text-sm font-medium text-primary mb-8 shadow-sm"
+          >
+            <span className="h-2 w-2 rounded-full bg-primary" />
+            Available for freelance work
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
