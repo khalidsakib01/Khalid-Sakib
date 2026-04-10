@@ -8,28 +8,28 @@ const projects = [
     description: "Sample storefront experience with product browsing, category filtering, and a polished responsive UI.",
     tech: ["React", "Tailwind CSS", "Vercel"],
     live: "https://example.com/demo-store",
-    github: "https://github.com/khalidsakib01",
+    github: "https://github.com/pixelforge-labs",
   },
   {
     title: "Dashboard Demo",
     description: "Analytics dashboard concept with cards, charts, activity tracking, and a clean admin layout.",
     tech: ["React", "Firebase", "Tailwind CSS"],
     live: "https://example.com/demo-dashboard",
-    github: "https://github.com/khalidsakib01",
+    github: "https://github.com/pixelforge-labs",
   },
   {
     title: "Portfolio Concept",
     description: "Creative portfolio demo focused on smooth transitions, strong visual hierarchy, and modern presentation.",
     tech: ["React", "JavaScript", "CSS3"],
     live: "https://example.com/demo-portfolio",
-    github: "https://github.com/khalidsakib01",
+    github: "https://github.com/pixelforge-labs",
   },
   {
     title: "Agency Landing Page",
     description: "Marketing-focused landing page demo with service sections, testimonials, and conversion-first structure.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     live: "https://example.com/demo-agency",
-    github: "https://github.com/khalidsakib01",
+    github: "https://github.com/pixelforge-labs",
   },
 ];
 
@@ -104,3 +104,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

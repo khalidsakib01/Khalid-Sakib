@@ -26,8 +26,8 @@ const About = () => {
 
           <div className="grid md:grid-cols-5 gap-8 items-center">
             <div className="md:col-span-2 flex justify-center">
-              <div className="w-56 h-56 md:w-64 md:h-64 rounded-2xl gradient-bg p-1">
-                <div className="w-full h-full rounded-2xl overflow-hidden">
+              <div className="w-56 h-56 md:w-64 md:h-64 rounded-3xl border border-border bg-card/70 p-2 shadow-xl">
+                <div className="w-full h-full rounded-[1.25rem] overflow-hidden">
                   <img src={khalidPhoto} alt="Khalid Sakib" className="w-full h-full object-cover" />
                 </div>
               </div>

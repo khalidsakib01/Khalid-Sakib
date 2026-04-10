@@ -41,7 +41,7 @@ const Contact = () => {
               {[
                 { icon: Mail, label: "khalidsakib01@gmail.com", href: "mailto:khalidsakib01@gmail.com" },
                 { icon: MessageCircle, label: "+880 1943 869880", href: "https://wa.me/8801943869880" },
-                { icon: Github, label: "khalidsakib01", href: "https://github.com/khalidsakib01" },
+                { icon: Github, label: "pixelforge-labs", href: "https://github.com/pixelforge-labs" },
                 { icon: Linkedin, label: "Khalid Sakib", href: "https://linkedin.com/in/khalidsakib01" },
                 { icon: MapPin, label: "Dhaka, Bangladesh", href: "#" },
               ].map((item) => (
