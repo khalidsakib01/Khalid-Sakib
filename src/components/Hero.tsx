@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -25,32 +24,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
             Web developer with 4+ years of experience creating high-performance
             digital products that help businesses grow online.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <a
-              href="#projects"
-              className="gradient-bg text-primary-foreground px-8 py-3.5 rounded-2xl font-medium inline-flex items-center gap-2 shadow-[0_20px_60px_-25px_rgba(78,145,255,0.85)] hover:opacity-90 transition-opacity"
-            >
-              View My Work
-              <ArrowRight size={18} />
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-3.5 rounded-2xl font-medium border border-border bg-card/60 hover:bg-secondary transition-colors inline-flex items-center gap-2"
-            >
-              Contact Me
-            </a>
-          </motion.div>
         </div>
       </div>
     </section>
